@@ -1,0 +1,32 @@
+// ------------------------------------------
+// Breakpoints:
+// ------------------------------------------
+//  $device--little
+//  $device--small
+//  $device
+//  $device--medium
+//  $device--big
+//  $device--large
+// ==========================
+
+$mobile: 320px;
+$mobile--medium: 440px;
+$mobile--big: 520px;
+$tablet: 768px;
+$desktop--small: 1024px;
+$desktop: 1200px;
+$desktop--medium: 1440px;
+$desktop--full: 1920px;
+
+$app-container: 1440px;
+
+$breakpoints: (
+  'mobile' $mobile,
+  'mobile--medium' $mobile--medium,
+  'mobile--big' $mobile--big,
+  'tablet' $tablet,
+  'desktop--small' $desktop--small,
+  'desktop' $desktop,
+  'desktop--medium' $desktop--medium,
+  'desktop--full' $desktop--full,
+);

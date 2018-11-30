@@ -1,0 +1,281 @@
+// ------------------------------------------
+//  Animations
+// ------------------------------------------
+/* stylelint-disable */
+
+.animation--zoom {
+  margin-bottom: -5px;
+  transform: scale(1.05);
+  transition: all 3s ease-in-out;
+
+  &:hover {
+    @include min-screen($tablet) {
+      transform: scale(1.3);
+      transition: all 10s ease-out;
+    }
+  }
+}
+
+@include keyframes(fadeInLeft) {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInRight) {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInTop) {
+  from {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+  }
+
+  to {
+      transform: none;
+      opacity: 1;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@include keyframes(fadeInSlow) {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@include keyframes(fadeInWithScale) {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@include keyframes(fadeInWithScaleInverted) {
+    0% {
+        opacity: 0;
+    }
+
+	50% {
+        opacity: 1;
+        transform: scale(1.5) translate3d(-50px, -50px, 0);
+	}
+
+    100% {
+		transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+@include keyframes(fadeOut) {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes blurInAnimation {
+  from {
+    filter: blur(0);
+  }
+
+  to {
+    filter: blur(20px);
+  }
+}
+
+@keyframes blurOutAnimation {
+  from {
+    filter: blur(20px);
+  }
+
+  to {
+    filter: blur(0);
+  }
+}
+
+.owl-animated-out {
+  z-index : 1
+}
+
+.owl-animated-in {
+  z-index : 0
+}
+
+.fadeInSlow {
+    -webkit-animation-name: fadeInSlow;
+    	    animation-name: fadeInSlow;
+            animation-duration: 2.5s;
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    	    animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    	    animation-name: fadeInRight;
+}
+
+.fadeInTop {
+    -webkit-animation-name: fadeInTop;
+    	    animation-name: fadeInTop;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    	    animation-name: fadeIn;
+}
+
+.fadeInWithScale {
+	-webkit-animation-name: fadeInWithScale;
+			animation-name: fadeInWithScale;
+}
+
+.fadeInWithScaleInverted {
+	-webkit-animation-name: fadeInWithScaleInverted;
+			animation-name: fadeInWithScaleInverted;
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.blurIn {
+  animation-name: blurInAnimation;
+  animation-duration: 1s
+}
+
+.blurOut {
+  animation-name: blurOutAnimation;
+  animation-duration: 1s
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+
+	&--invisible {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+  &--delayed-01s {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+  &--delayed-02s {
+      -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+
+  &--delayed-03s {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+
+  &--delayed-04s {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+
+  &--delayed-06s {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+
+  &--delayed-08s {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+}
+
+@keyframes zoomed-big {
+  from {
+    opacity: 0;
+    width: 30%;
+  }
+
+  to {
+    opacity: 1;
+    width: 50%;
+  }
+}
+
+@keyframes zoomed {
+  from {
+    opacity: 0;
+    width: 40%;
+  }
+
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+
+@keyframes zoomed-mobile {
+  from {
+    opacity: 0;
+    width: 60%;
+  }
+
+  to {
+    opacity: 1;
+    width: 80%;
+  }
+}
+
+@keyframes cookies-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  80% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,12 @@
+@import 'settings/reset';
+@import 'settings/mixins';
+@import 'settings/breakpoints';
+@import 'settings/variables';
+@import 'settings/fonts';
+@import 'general/animations';
+@import 'general/backgrounds';
+@import 'general/typography';
+@import 'general/utilities';
+
+/** Import theme styles */
+@import 'settings/global';
